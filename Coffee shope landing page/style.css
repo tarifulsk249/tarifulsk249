@@ -13,7 +13,7 @@
     text-decoration: none;
     height: 100%;
     width: 100%;
-    background: hsl(0, 15%, 82%);
+    background: hwb(0 32% 63%);
    
 }
 .logo img{
@@ -28,9 +28,18 @@
 }
 .anchor a{
    margin-left: 110px;
-   color: #6F4E37;
+   color: black;
    font-size: 1.2rem;
    text-decoration: none;
+ 
+}
+
+.anchor a:hover{
+    border-radius: 5px;
+    transition: all;
+    background: whitesmoke;
+    border: none;
+    transition: .5s ease-in-out;
 
 }
 .search{
@@ -58,19 +67,40 @@
 
 }
 .heading h1{
-    letter-spacing: 1px;
-    color: #2477c1;
+    
+    font-size: 2.9rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.heading h1{
+    color: transparent;
+    -webkit-text-stroke: 3px #6F4E37;
+    position: relative;
 
+}
+    
+.heading h1::before{
+    content: "COFFEE";
+    position: absolute;
+    width: 0%;
+    height: fit-content;
+    overflow: hidden;
+    color: #6F4E37;
+    border-right: 8px solid #6F4E37;
+    transition: 3s step-end;
+}
+.heading h1:hover::before{
+    width: fit-content;
+    filter: drop-shadow(0 0 25px #6F4E37);
 }
 .heading h3{
     letter-spacing: 1px;
-    color: antiquewhite;
+    color: #df1ace;
 
 }
-
 .para{
    
-    color: rgb(219, 236, 238);
+    color: #ffffff;
     margin-top: 250px;
     margin-left: 440px;
     height: 150px;
@@ -78,13 +108,10 @@
    
    
 }
-
-
-
 .button{
-    border: 1px solid gray;
    border-radius: 19px;
     margin-left: 440px;
+    margin-top: 25PX;
 }
 .button:hover{
     background-color: #6F4E37;
